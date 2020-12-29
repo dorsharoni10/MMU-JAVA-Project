@@ -11,9 +11,8 @@ extends AbstractAlgoCache<K,V>  implements IAlgoCache <K,V> {
 
 	//constructor
 	public LRUAlgoCachelmpl(int capacity) {
-		//super for take the capacity from father.
 		super(capacity);
-
+		
 		//LinkedHashMap with this argument: 0.75f, true. Acting like LRU caching.
 		this.lruLinked = new LinkedHashMap<>(getCapacity(), 0.75f, true);
 
